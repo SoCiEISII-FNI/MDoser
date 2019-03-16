@@ -10,11 +10,16 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="CALCULO DE ELEMENTOS"
-        android:id="@+id/lblTitleElement"/>
+        android:id="@+id/lblTitleElement"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="60dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="30dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,11 +28,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Proporción 1X"/>
+                android:text="Proporción 1X"
+                android:textSize="20dp"/>
             <Spinner
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/proportion"></Spinner>
+                android:id="@+id/proportion"
+                android:layout_weight="1"></Spinner>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="5"></LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,21 +48,66 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Aporte Arena"/>
+                android:text="Aporte Arena"
+                android:textSize="20dp"/>
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"/>
+                android:inputType="number"
+                android:layout_weight="1"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"></LinearLayout>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Calcular"/>
     </LinearLayout>
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="REQUIERE:"
+            android:id="@+id/lblSubtitle"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Conncreto: 0000.00 [kg/m3 mortero]"
+            android:textSize="20dp"
+            android:id="@+id/lblConcret"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Arena: 0000.00 [m3 arena/m3 mortero]"
+            android:textSize="20dp"
+            android:id="@+id/lblSand"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Agua: 0000.00 [l/m3 mortero]"
+            android:textSize="20dp"
+            android:id="@+id/lblWater"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Calculado con 47% de aporte de cemento."
+            android:id="@+id/lblCommentElements"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
 </LinearLayout>
