@@ -33,8 +33,10 @@
             <Spinner
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/proportion"
-                android:layout_weight="1"></Spinner>
+                android:id="@+id/txtProportion"
+                android:layout_weight="1"
+                android:textSize="20dp">
+            </Spinner>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -54,7 +56,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:id="@+id/txtCoeficient"/>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -69,7 +72,8 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Calcular"/>
+            android:text="Calcular"
+            android:id="@+id/btnCalculate"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -88,7 +92,7 @@
             android:gravity="center"
             android:hint="Conncreto: 0000.00 [kg/m3 mortero]"
             android:textSize="20dp"
-            android:id="@+id/lblConcret"/>
+            android:id="@+id/lblConcrete"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

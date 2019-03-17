@@ -23,9 +23,9 @@ public final class Brick extends AbstractOperation {
      * @return number to be trucked.
      */
     @Override
-    public float CalculateQuantity() {
-        float numberBricks;
+    public double CalculateQuantity() {
+        double numberBricks;
         numberBricks = (1 / ((base + separation) * (height + separation))) * LOST;
-        return numberBricks;
+        return Math.ceil(numberBricks);
     }
 }

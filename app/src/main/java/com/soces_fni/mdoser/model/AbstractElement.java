@@ -36,9 +36,9 @@ public abstract class AbstractElement extends AbstractOperation {
      * precalcule for post quantities.
      * @return float.
      */
-    public float CalculateSumProportion() {
-        float sum = CONCRETE_COEF_INPUT + proportion * (sandCoefInput / 100)
-                + 0.2f * (1 + proportion);
+    public double CalculateSumProportion() {
+        double sum = CONCRETE_COEF_INPUT + (proportion * (sandCoefInput / 100f))
+                + (0.2f * (1f + proportion));
         return sum;
     }
 }
