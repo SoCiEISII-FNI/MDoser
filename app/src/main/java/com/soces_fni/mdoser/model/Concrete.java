@@ -1,5 +1,8 @@
 package com.soces_fni.mdoser.model;
 
+/**
+ * class for concrete.
+ */
 public final class Concrete extends AbstractElement {
 
     // kg/m3 mortero

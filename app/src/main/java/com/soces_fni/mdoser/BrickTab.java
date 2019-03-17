@@ -13,8 +13,11 @@ import android.widget.TextView;
 
 import com.soces_fni.mdoser.model.Brick;
 
+/**
+ * controller for tab of bricks.
+ */
 public class BrickTab extends Fragment {
-    private static final String TAG = "Tab1";
+    private static final String TAG = "BRICKS";
     EditText txtHeight;
     private EditText txtBase;
     private EditText txtSeparation;
@@ -22,6 +25,9 @@ public class BrickTab extends Fragment {
     private TextView lblBricks;
     private static final String UNITY = " [ladrillo(s)/m2]";
 
+    /**
+     * method which receives data and send the answer.
+     */
     private void Calculate() {
         float height;
         float base;
@@ -37,6 +43,13 @@ public class BrickTab extends Fragment {
         lblBricks.setText(builder.toString());
     }
 
+    /**
+     * creates the view of te fragement.
+     * @param inflater .
+     * @param container .
+     * @param savedInstanceState .
+     * @return view.
+     */
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

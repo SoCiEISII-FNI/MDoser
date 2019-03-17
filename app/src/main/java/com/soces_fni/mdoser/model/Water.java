@@ -1,5 +1,8 @@
 package com.soces_fni.mdoser.model;
 
+/**
+ * class for water.
+ */
 public final class Water extends AbstractElement {
 
     /**
