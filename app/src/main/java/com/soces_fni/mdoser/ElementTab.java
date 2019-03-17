@@ -19,8 +19,11 @@ import com.soces_fni.mdoser.model.Water;
 
 import java.math.BigDecimal;
 
+/**
+ * controller for tab element.
+ */
 public class ElementTab extends Fragment {
-    private static final String TAG = "Tab2";
+    private static final String TAG = "ELEMENTS";
     private Spinner txtProportion;
     private EditText txtCoeficient;
     private Button btnCalculate;
@@ -34,6 +37,9 @@ public class ElementTab extends Fragment {
     private static final String SAND_UNITY = " [m3 arena/m3 mortero]";
     private static final String WATER_UNITY = " [l/m3 mortero]";
 
+    /**
+     * method which receives data and send the answer.
+     */
     private void Calculate() {
         int proportion;
         int coeficient;
@@ -68,6 +74,13 @@ public class ElementTab extends Fragment {
         lblWater.setText(builder.toString());
     }
 
+    /**
+     * method which creates the fragment view.
+     * @param inflater .
+     * @param container .
+     * @param savedInstanceState .
+     * @return view.
+     */
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

@@ -1,5 +1,8 @@
 package com.soces_fni.mdoser.model;
 
+/**
+ * class for bricks.
+ */
 public final class Brick extends AbstractOperation {
     private float height;
     private float base;

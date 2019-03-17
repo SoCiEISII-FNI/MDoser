@@ -7,6 +7,9 @@ import android.os.Handler;
 import android.os.Bundle;
 import android.view.WindowManager;
 
+/**
+ * Splash.
+ */
 public class MainActivity extends Activity {
     private final int delay = 5000;
     @Override

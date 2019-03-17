@@ -5,13 +5,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 
+/**
+ * controller for tabs.
+ */
 public class Main2Activity extends AppCompatActivity {
-
-    private static final String TAG = "Main";
 
     private SectionsPageAdapter sectionsPageAdapter;
     private ViewPager nVewPager;
 
+    /**
+     * create the view.
+     * @param savedInstanceState .
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,11 +29,15 @@ public class Main2Activity extends AppCompatActivity {
         tabLayout.setupWithViewPager(nVewPager);
     }
 
+    /**
+     * method where the tabs are being added.
+     * @param viewPager .
+     */
     private void setupViewPager(ViewPager viewPager)
     {
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
-        adapter.addFragment(new BrickTab(), "tab1");
-        adapter.addFragment(new ElementTab(), "tab2");
+        adapter.addFragment(new BrickTab(), "BRICKS");
+        adapter.addFragment(new ElementTab(), "ELEMENTS");
         viewPager.setAdapter(adapter);
     }
 }

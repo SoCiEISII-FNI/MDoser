@@ -1,5 +1,8 @@
 package com.soces_fni.mdoser.model;
 
+/**
+ * father class for elements which are not bricks.
+ */
 public abstract class AbstractElement extends AbstractOperation {
 
     private int proportion;

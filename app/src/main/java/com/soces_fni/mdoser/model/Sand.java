@@ -1,5 +1,8 @@
 package com.soces_fni.mdoser.model;
 
+/**
+ * class for sand.
+ */
 public final class Sand extends AbstractElement {
 
     /**
