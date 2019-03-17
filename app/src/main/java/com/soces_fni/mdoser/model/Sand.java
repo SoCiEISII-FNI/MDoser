@@ -16,10 +16,10 @@ public final class Sand extends AbstractElement {
      * @return m3 sand / m3 mortero.
      */
     @Override
-    public float CalculateQuantity() {
-        float sandQuantity;
-        float proportion = getProportion();
-        float sumProportion = CalculateSumProportion();
+    public double CalculateQuantity() {
+        double sandQuantity;
+        double proportion = getProportion();
+        double sumProportion = CalculateSumProportion();
 
         // m3 sand / m3 mortero
         sandQuantity = proportion / sumProportion;

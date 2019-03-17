@@ -6,5 +6,5 @@ public abstract class AbstractOperation {
      * method for calculate needed quantity.
      * @return float value.
      */
-    public abstract float CalculateQuantity();
+    public abstract double CalculateQuantity();
 }

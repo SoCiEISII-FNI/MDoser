@@ -11,12 +11,13 @@ public class Main2Activity extends AppCompatActivity {
 
     private SectionsPageAdapter sectionsPageAdapter;
     private ViewPager nVewPager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         sectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
-        nVewPager = (ViewPager) findViewById(R.id.container);
+        nVewPager = findViewById(R.id.container);
         setupViewPager(nVewPager);
 
         TabLayout tabLayout = findViewById(R.id.tabs);

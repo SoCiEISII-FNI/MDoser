@@ -16,10 +16,10 @@ public final class Water extends AbstractElement {
      * @return l/m3 mortero.
      */
     @Override
-    public float CalculateQuantity() {
-        float waterQuantity;
-        float proportion = getProportion();
-        float sumProportion = CalculateSumProportion();
+    public double CalculateQuantity() {
+        double waterQuantity;
+        double proportion = getProportion();
+        double sumProportion = CalculateSumProportion();
 
         // l/m3 mortero
         waterQuantity = ((0.2f * (1 + proportion)) / sumProportion) * 1000;

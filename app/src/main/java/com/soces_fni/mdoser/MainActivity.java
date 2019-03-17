@@ -1,24 +1,30 @@
 package com.soces_fni.mdoser;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.content.pm.ActivityInfo;
+import android.os.Handler;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.view.WindowManager;
 
-public class MainActivity extends AppCompatActivity {
-    Button button;
+public class MainActivity extends Activity {
+    private final int delay = 5000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_main);
-        button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
+            public void run() {
+                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
                 startActivity(intent);
+                finish();
             }
-        });
+        }, delay);
     }
 }

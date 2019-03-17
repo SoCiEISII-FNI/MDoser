@@ -19,9 +19,9 @@ public final class Concrete extends AbstractElement {
      * @return kg/m3 mortero.
      */
     @Override
-    public float CalculateQuantity() {
-        float concreteQuantity;
-        float sumProportion = CalculateSumProportion();
+    public double CalculateQuantity() {
+        double concreteQuantity;
+        double sumProportion = CalculateSumProportion();
         concreteQuantity = (1 / sumProportion) * DENSITY;
         return concreteQuantity;
     }
