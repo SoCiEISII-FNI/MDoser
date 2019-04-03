@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +32,7 @@ public class ElementTab extends Fragment {
     private TextView lblConcrete;
     private TextView lblSand;
     private TextView lblWater;
+    private int coeficient;
     private static final String CONCRETE = "Concreto: ";
     private static final String SAND = "Arena: ";
     private static final String WATER = "Agua: ";
@@ -40,11 +43,9 @@ public class ElementTab extends Fragment {
     /**
      * method which receives data and send the answer.
      */
-    private void Calculate() {
+    private void Calculate(int coeficient) {
         int proportion;
-        int coeficient;
         proportion = Integer.parseInt(txtProportion.getSelectedItem().toString());
-        coeficient = Integer.parseInt(txtCoeficient.getText().toString());
         Concrete concrete = new Concrete(proportion, coeficient);
         Sand sand = new Sand(proportion, coeficient);
         Water water = new Water(proportion, coeficient);
@@ -95,12 +96,50 @@ public class ElementTab extends Fragment {
         lblSand = view.findViewById(R.id.lblSand);
         lblWater = view.findViewById(R.id.lblWater);
 
-        btnCalculate.setOnClickListener(new View.OnClickListener() {
+        txtCoeficient.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onClick(View v) {
-                Calculate();
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            /**
+             * validation when writting.
+             * @param s
+             * @param start
+             * @param before
+             * @param count
+             */
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                try {
+                    if(txtCoeficient.getText().toString() != "") {
+                        coeficient = Integer.parseInt(txtCoeficient.getText().toString());
+                        btnCalculate.setEnabled(true);
+                    }
+                } catch (Exception ex) {
+                    txtCoeficient.setError("Error en el dato ingresado");
+                    btnCalculate.setEnabled(false);
+                    txtCoeficient.requestFocus();
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
             }
         });
+
+        btnCalculate.setOnClickListener(new View.OnClickListener() {
+            /**
+             * calculate action.
+             * @param v
+             */
+            @Override
+            public void onClick(View v) {
+                Calculate(coeficient);
+            }
+        });
+
         return view;
     }
 }
