@@ -5,10 +5,10 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class BrickTest {
-    public static final int HEIGHT = 10;
-    public static final int BASE = 20;
-    public static final int SEPARATION = 1;
-    public static final double EXPECTED = 1.0;
+    public static final float HEIGHT = 11f;
+    public static final float BASE = 25f;
+    public static final float SEPARATION = 1f;
+    public static final double EXPECTED = 36f;
     public static final double DELTA = 0.1;
 
     /**

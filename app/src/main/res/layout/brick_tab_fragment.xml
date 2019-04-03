@@ -49,6 +49,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Calcular"
+                android:enabled="false"
+                android:textSize="20dp"
+                android:textColor="@color/textIcons"
+                android:background="@color/colorPrimary"
                 android:id="@+id/btnCalculate"/>
         </LinearLayout>
     </LinearLayout>
@@ -61,9 +65,40 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="PARA:"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/lblSubtitle1"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Altura: 0 [cm]"
+                android:layout_marginRight="30dp"
+                android:id="@+id/lblHeight"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Base: 0 [cm]"
+                android:layout_marginRight="30dp"
+                android:id="@+id/lblBase"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Junta: 0 [cm]"
+                android:id="@+id/lblSeparation"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="REQUIERE:"
             android:layout_marginBottom="20dp"
-            android:id="@+id/lblSubtitle"/>
+            android:id="@+id/lblSubtitle2"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

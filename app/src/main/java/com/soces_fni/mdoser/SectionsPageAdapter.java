@@ -8,10 +8,18 @@ import android.support.v4.app.FragmentPagerAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * this class manage the tabs.
+ */
 public class SectionsPageAdapter extends FragmentPagerAdapter {
     private List<Fragment> fragmentList = new ArrayList<>();
     private List<String> titleList = new ArrayList<>();
 
+    /**
+     * add fragements to be used in the app.
+     * @param fragment
+     * @param title
+     */
     public void addFragment(Fragment fragment, String title)
     {
         fragmentList.add(fragment);
@@ -22,17 +30,31 @@ public class SectionsPageAdapter extends FragmentPagerAdapter {
         super(fm);
     }
 
+    /**
+     * gets title for the tab.
+     * @param position
+     * @return
+     */
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        return super.getPageTitle(position);
+        return titleList.get(position);
     }
 
+    /**
+     * gets the fragment to display.
+     * @param position
+     * @return
+     */
     @Override
     public Fragment getItem(int position) {
         return fragmentList.get(position);
     }
 
+    /**
+     * amount of tabs. fix.
+     * @return
+     */
     @Override
     public int getCount() {
         return 2;
